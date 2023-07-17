@@ -48,16 +48,6 @@ const t5 = ref(null);
 const t6 = ref(null);
 const t7 = ref(null);
 
-const positionY = ref({
-    t1: null,
-    t2: null,
-    t3: null,
-    t4: null,
-    t5: null,
-    t6: null,
-    t7: null
-})
-
 const moveTo = (value) => {
     emits('click', value)
 };
@@ -71,51 +61,42 @@ const yesClicked = () => {
 const noClicked = () => {
     modalOpened.value = true
     yes.value = false
-}
-
-onMounted(() => {
-    setTimeout(() => {
-        positionY.value.t1 = t1.value.offsetTop
-        positionY.value.t2 = t2.value.offsetTop
-        positionY.value.t3 = t3.value.offsetTop
-        positionY.value.t4 = t4.value.offsetTop
-        positionY.value.t5 = t5.value.offsetTop
-        positionY.value.t6 = t6.value.offsetTop
-        positionY.value.t7 = t7.value.offsetTop
-    }, 3000);
-});
+};
 
 </script>
 
 <template>
     <div class="fixed z-10 right-[38px] top-20 bg-white px-5 py-1 text-lg shadow-md font-semibold rounded-3xl flex items-center space-x-2 text-[#52a1f5] max-md:hidden">
-        <p @click="moveTo(positionY.t1)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t1.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
             1
         </p>
-        <p @click="moveTo(positionY.t2)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t2.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
             2
         </p>
-        <p @click="moveTo(positionY.t3)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t3.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
             3
         </p>
-        <p @click="moveTo(positionY.t4)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t4.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
             4
         </p>
-        <p @click="moveTo(positionY.t5)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t5.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
             5
         </p>
-        <p @click="moveTo(positionY.t6)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t6.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
             6
         </p>
-        <p @click="moveTo(positionY.t7)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t7.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
             7
         </p>
     </div>
-    <p ref="t1" class="text-xl font-semibold sticky top-20 z-50 mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow">Tháng 1</p>
+    <p class="text-xl font-semibold sticky top-20 z-50 mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow">Tháng 1</p>
+    <div ref="t1" class="relative"></div>
     <Container>
         <img :src="pic_t1" class="rounded-3xl transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
     </Container>
-    <p ref="t2" class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 2</p>
+
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 2</p>
+    <div ref="t2" class="relative"></div>
     <div class="grid grid-cols-3 max-[480px]:grid-cols-1 grid-rows-[repeat(x,max-content),1fr] gap-10">
         <Container>
             <img :src="pic_t2_1" class="rounded-3xl max-h-[700px] transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
@@ -130,7 +111,8 @@ onMounted(() => {
         </Container>
     </div>
 
-    <p ref="t3" class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 3</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 3</p>
+    <div ref="t3" class="relative"></div>
     <div class="space-y-4">
         <Container>
             <img :src="pic_t3_3" class="rounded-3xl transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
@@ -161,7 +143,8 @@ onMounted(() => {
         </Container>
     </div>
 
-    <p ref="t4" class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 4</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 4</p>
+    <div ref="t4" class="relative"></div>
     <Container>
         <img :src="pic_t4_1" class="rounded-3xl max-h-[500px] transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
     </Container>
@@ -176,7 +159,8 @@ onMounted(() => {
         </Container>
     </div>
 
-    <p ref="t5" class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 5</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 5</p>
+    <div ref="t5" class="relative"></div>
     <div class="grid grid-cols-3 max-[480px]:grid-cols-1 grid-rows-[repeat(x,max-content),1fr] gap-4 mb-4">
         <Container>
             <img :src="pic_t5_2" class="rounded-3xl max-h-[500px] transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
@@ -204,7 +188,8 @@ onMounted(() => {
         </Container>
     </div>
     
-    <p ref="t6" class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 6</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 6</p>
+    <div ref="t6" class="relative"></div>
     <Container>
         <img :src="pic_t6_1" class="rounded-3xl max-h-[500px] transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
     </Container>
@@ -232,7 +217,8 @@ onMounted(() => {
         </Container>
     </div>
 
-    <p ref="t7" class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 7</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 7</p>
+    <div ref="t7" class="relative"></div>
     <Container>
         <img :src="pic_t7_7" class="rounded-3xl max-h-[500px] transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
     </Container>

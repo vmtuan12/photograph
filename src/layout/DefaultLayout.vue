@@ -17,7 +17,6 @@ const handleScroll = () => {
 window.addEventListener('scroll', handleScroll)
 
 const moveTo = (value) => {
-    console.log(value);
     main.value.scrollTop = value
 }
 
