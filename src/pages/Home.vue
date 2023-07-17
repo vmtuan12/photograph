@@ -82,7 +82,7 @@ onMounted(() => {
         positionY.value.t5 = t5.value.offsetTop
         positionY.value.t6 = t6.value.offsetTop
         positionY.value.t7 = t7.value.offsetTop
-    }, 1000);
+    }, 3000);
 });
 
 </script>
