@@ -5,7 +5,7 @@ const emits = defineEmits(['exitModal']);
 
 <template>
     <Transition name="fade">
-        <div v-if="condition" class="bg-black/20 top-0 left-0 w-full h-full fixed z-50 flex items-center justify-center backdrop-blur" @click.self="$emit('exitModal')">
+        <div v-if="condition" class="bg-black/20 top-0 left-0 w-full h-full fixed z-[100] flex items-center justify-center backdrop-blur" @click.self="$emit('exitModal')">
             <slot>
 
             </slot> 

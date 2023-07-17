@@ -16,6 +16,11 @@ const handleScroll = () => {
 
 window.addEventListener('scroll', handleScroll)
 
+const moveTo = (value) => {
+    console.log(value);
+    main.value.scrollTop = value
+}
+
 onBeforeMount(() => {
     if(window.innerWidth <= 640) {
         smallBar.value = true
@@ -30,9 +35,6 @@ watch(() => route.fullPath, () => {
     main.value.scrollTop = 0
 });
 
-const click = () => {
-    console.log(123);
-};
 </script>
 
 <template>
@@ -46,7 +48,7 @@ const click = () => {
             @scroll="handleScroll"
         >
             <div 
-                class="sticky z-10 w-full top-0 flex items-center justify-between py-3 rounded-b-3xl transition-all duration-500 ease-in-out"
+                class="sticky z-30 w-full top-0 flex items-center justify-between py-3 rounded-b-3xl transition-all duration-500 ease-in-out"
                 :class="scrollPosition > 0 ? 'bg-[#52a1f5] text-white px-5' : 'text-[#52a1f5]'"
             >
                 <p class="text-xl font-bold">Tuấn và Phương</p>
@@ -57,14 +59,11 @@ const click = () => {
                 v-if="smallBar"
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
                 stroke-width="2" stroke="currentColor" 
-                class="w-8 h-8 fixed top-20 z-[1] rounded-r-lg shadow-md p-1.5 text-white bg-[#52a1f5] cursor-pointer sm:hidden"
+                class="w-8 h-8 fixed top-52 z-[1] rounded-r-lg shadow-md p-1.5 text-white bg-[#52a1f5] cursor-pointer sm:hidden"
             >
                 <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
             </svg>
-            <router-view v-slot="{ Component }" @click="click">
-                <transition name="fade" mode="out-in">
-                    <component :is="Component" />
-                </transition>
+            <router-view @click="moveTo" :scroll-position="scrollPosition">
             </router-view>
         </div>
     </div>

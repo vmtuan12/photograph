@@ -16,6 +16,7 @@
     "nprogress": "^0.2.0",
     "pdfmake": "^0.2.7",
     "pinia": "^2.0.32",
+    "vercel": "^31.0.3",
     "vue": "^3.2.47",
     "vue-nprogress": "^0.2.0",
     "vue-router": "^4.1.6"
