@@ -36,6 +36,8 @@ import pic_t7_6 from "../assets/t7/t7_img_6.jpg"
 import pic_t7_7 from "../assets/t7/t7_img_7.jpg"
 import pic_t7_8 from "../assets/t7/t7_img_8.jpg"
 import mthp from '../assets/profile/mthp.jpg'
+import mthp_paint from '../assets/profile/mthp_paint.jpg'
+import vcl from '../assets/profile/vcl.jpg'
 
 const props = defineProps(['scrollPosition']);
 const emits = defineEmits(['click']);
@@ -89,6 +91,16 @@ const noClicked = () => {
             7
         </p>
     </div>
+
+    <div class="mt-16 font-bold text-gray-600 mb-8 space-x-2">
+        <p class="inline">Nơi cất giữ kỉ niệm của Minh Tuấn và Hà Phương</p>
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline text-[#f96300]">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
+        </span>
+    </div>
+
     <p class="text-xl font-semibold sticky top-20 z-50 mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow">Tháng 1</p>
     <div ref="t1" class="relative"></div>
     <Container>
@@ -273,8 +285,14 @@ const noClicked = () => {
 
     <Modal :condition="modalOpened" @exitModal="modalOpened = false">
         <div class="rounded-3xl bg-white flex justify-center items-center">
-            <p class="text-2xl font-semibold text-[#39c0c8] p-4" v-if="yes">Nói trực tiếp đi em</p>
-            <p class="text-2xl font-semibold text-[#f34971] p-4" v-else>Không cdb</p>
+            <div class="text-2xl font-semibold text-[#39c0c8] p-4 flex flex-col items-center space-y-4" v-if="yes">
+                <img :src="vcl" class="w-96 rounded-3xl"/>
+                <p>Nói trực tiếp đi em</p>
+            </div>
+            <div class="text-2xl font-semibold text-[#f34971] p-4 text-center" v-else>
+                <img :src="mthp_paint" />
+                <p>Anh thì muốn nói anh yêu em rất nhiều</p>
+            </div>
         </div>
     </Modal>
 </template>

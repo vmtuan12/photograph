@@ -26,7 +26,7 @@ const props = defineProps([
     'rowMinHeight'
 ]);
 
-
+const columnArray = [];
 
 const table = ref()
 const scrollPosition = ref(0)
