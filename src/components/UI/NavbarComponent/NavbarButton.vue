@@ -18,7 +18,7 @@ const routeMatched = computed(() => {
 <template>
     <div 
         class="relative w-[200%] rounded-l-full group px-2"
-        :class="routeMatched ? 'bg-[#f5f7fb] text-[#52a1f5]' : 'hover:bg-[#f5f7fb] hover:text-[#52a1f5] text-white'"
+        :class="routeMatched ? 'bg-[#f5f7fb] text-[#FF78C4]' : 'hover:bg-[#f5f7fb] hover:text-[#FF78C4] text-white'"
     >
         <RouterLink 
             :to="props.to"

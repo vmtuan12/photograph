@@ -8,7 +8,7 @@ const props = defineProps(['smallbar']);
 <template>
     <div 
         id="sidebar" 
-        class="max-h-screen sticky top-0 bg-[#52a1f5] sm:border-l-8 border-solid border-[#52a1f5] transition-all duration-500 overflow-hidden" 
+        class="max-h-screen sticky top-0 bg-[#FF78C4] sm:border-l-8 border-solid border-[#FF78C4] transition-all duration-500 overflow-hidden" 
         :class="smallbar ? 'w-16 max-sm:w-0' : 'w-60 max-sm:w-full'"
     >
         <div class="w-full flex justify-end p-4">

@@ -68,26 +68,26 @@ const noClicked = () => {
 </script>
 
 <template>
-    <div class="fixed z-10 right-[38px] top-20 bg-white px-5 py-1 text-lg shadow-md font-semibold rounded-3xl flex items-center space-x-2 text-[#52a1f5] max-md:hidden">
-        <p @click="moveTo(t1.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+    <div class="fixed z-10 right-[38px] top-20 bg-white px-5 py-1 text-lg shadow-md font-semibold rounded-3xl flex items-center space-x-2 text-[#FF78C4] max-md:hidden">
+        <p @click="moveTo(t1.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#FF78C4] hover:text-white hover:shadow-md hover:shadow-[#FF78C4]">
             1
         </p>
-        <p @click="moveTo(t2.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t2.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#FF78C4] hover:text-white hover:shadow-md hover:shadow-[#FF78C4]">
             2
         </p>
-        <p @click="moveTo(t3.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t3.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#FF78C4] hover:text-white hover:shadow-md hover:shadow-[#FF78C4]">
             3
         </p>
-        <p @click="moveTo(t4.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t4.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#FF78C4] hover:text-white hover:shadow-md hover:shadow-[#FF78C4]">
             4
         </p>
-        <p @click="moveTo(t5.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t5.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#FF78C4] hover:text-white hover:shadow-md hover:shadow-[#FF78C4]">
             5
         </p>
-        <p @click="moveTo(t6.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t6.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#FF78C4] hover:text-white hover:shadow-md hover:shadow-[#FF78C4]">
             6
         </p>
-        <p @click="moveTo(t7.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#52a1f5] hover:text-white hover:shadow-md hover:shadow-[#52a1f5]">
+        <p @click="moveTo(t7.offsetTop)" class="rounded-xl py-1 px-3 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#FF78C4] hover:text-white hover:shadow-md hover:shadow-[#FF78C4]">
             7
         </p>
     </div>
@@ -101,13 +101,13 @@ const noClicked = () => {
         </span>
     </div>
 
-    <p class="text-xl font-semibold sticky top-20 z-50 mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow">Tháng 1</p>
+    <p class="text-xl font-semibold sticky top-20 z-50 mb-4 bg-[#FF78C4] text-white w-fit px-4 py-2 rounded-3xl shadow">Tháng 1</p>
     <div ref="t1" class="relative"></div>
     <Container>
         <img :src="pic_t1" class="rounded-3xl transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
     </Container>
 
-    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 2</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#FF78C4] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 2</p>
     <div ref="t2" class="relative"></div>
     <div class="grid grid-cols-3 max-[480px]:grid-cols-1 grid-rows-[repeat(x,max-content),1fr] gap-10">
         <Container>
@@ -123,7 +123,7 @@ const noClicked = () => {
         </Container>
     </div>
 
-    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 3</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#FF78C4] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 3</p>
     <div ref="t3" class="relative"></div>
     <div class="space-y-4">
         <Container>
@@ -155,7 +155,7 @@ const noClicked = () => {
         </Container>
     </div>
 
-    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 4</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#FF78C4] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 4</p>
     <div ref="t4" class="relative"></div>
     <Container>
         <img :src="pic_t4_1" class="rounded-3xl max-h-[500px] transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
@@ -171,7 +171,7 @@ const noClicked = () => {
         </Container>
     </div>
 
-    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 5</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#FF78C4] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 5</p>
     <div ref="t5" class="relative"></div>
     <div class="grid grid-cols-3 max-[480px]:grid-cols-1 grid-rows-[repeat(x,max-content),1fr] gap-4 mb-4">
         <Container>
@@ -200,7 +200,7 @@ const noClicked = () => {
         </Container>
     </div>
     
-    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 6</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#FF78C4] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 6</p>
     <div ref="t6" class="relative"></div>
     <Container>
         <img :src="pic_t6_1" class="rounded-3xl max-h-[500px] transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
@@ -229,7 +229,7 @@ const noClicked = () => {
         </Container>
     </div>
 
-    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#52a1f5] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 7</p>
+    <p class="text-xl font-semibold sticky top-20 z-[60] mb-4 bg-[#FF78C4] text-white w-fit px-4 py-2 rounded-3xl shadow mt-10">Tháng 7</p>
     <div ref="t7" class="relative"></div>
     <Container>
         <img :src="pic_t7_7" class="rounded-3xl max-h-[500px] transition-all ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-gray-400 hover:shadow-[5px_5px_10px_0px]"/>
@@ -277,7 +277,7 @@ const noClicked = () => {
         <p @click="noClicked" class="cursor-pointer text-[#f34971] py-1 px-3 rounded-lg transition-all duration-300 ease-in-out hover:text-white hover:bg-[#f34971] hover:scale-110">Không</p>
     </div>
 
-    <div @click="moveTo(0)" class="fixed cursor-pointer z-[1] bottom-6 right-6 p-2 bg-[#52a1f5] rounded-full animate-bounce shadow-lg shadow-[#52a1f5]">
+    <div @click="moveTo(0)" class="fixed cursor-pointer z-[1] bottom-6 right-6 p-2 bg-[#FF78C4] rounded-full animate-bounce shadow-lg shadow-[#FF78C4]">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-6 text-white rounded-full">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
         </svg>

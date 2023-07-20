@@ -48,7 +48,7 @@ watch(() => route.fullPath, () => {
         >
             <div 
                 class="sticky z-30 w-full top-0 flex items-center justify-between py-3 rounded-b-3xl transition-all duration-500 ease-in-out"
-                :class="scrollPosition > 0 ? 'bg-[#52a1f5] text-white px-5' : 'text-[#52a1f5]'"
+                :class="scrollPosition > 0 ? 'bg-[#FF78C4] text-white px-5' : 'text-[#FF78C4]'"
             >
                 <p class="text-xl font-bold">Tuấn và Phương</p>
                 <ProfileDropdown />
@@ -58,7 +58,7 @@ watch(() => route.fullPath, () => {
                 v-if="smallBar"
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
                 stroke-width="2" stroke="currentColor" 
-                class="w-8 h-8 fixed top-72 z-[1] rounded-r-lg shadow-md p-1.5 text-white bg-[#52a1f5] cursor-pointer sm:hidden"
+                class="w-8 h-8 fixed top-72 z-[1] rounded-r-lg shadow-md p-1.5 text-white bg-[#FF78C4] cursor-pointer sm:hidden"
             >
                 <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
             </svg>
